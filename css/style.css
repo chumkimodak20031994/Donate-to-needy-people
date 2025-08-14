@@ -73,11 +73,18 @@ body {
   font-weight: bold;
 }
 
+.donation-container {
+  margin-bottom: 80px;
+  margin-left: 45px;
+  margin-right: 80px;
+}
 
 .donation-section {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin: 10px 35px;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 10px;
   padding: 20px;
   border: 0.5px solid #ccc;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -85,15 +92,20 @@ body {
   overflow: hidden;
 }
 
-.donation-section img {
-  width: 100%;
+.donation-section-img {
+  max-width: 100%;
+  flex-shrink: 0;
   height: auto;
-  display: block;
+  object-fit: cover;
 
 }
 
 .card-content {
+  flex-shrink: 0;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-title {
@@ -109,7 +121,6 @@ body {
 }
 
 .donation-input {
-  width: 97%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -132,7 +143,10 @@ body {
   list-style: none;
   border-radius: 10px;
   padding: 15px 30px;
-  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 40px;
+  border: 0.5px solid #ccc;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 
 }
@@ -153,30 +167,39 @@ body {
 
 .coin-btn {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 4px;
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: #555;
   border: none;
+  background: #f8f8f8;
   margin-bottom: 10px;
+  object-fit: contain;
+  white-space: nowrap;
+  width: fit-content;
+
 }
 
 .coin-btn img {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
+
+
 
 .fotter-content {
   background-color: rgb(229, 218, 220);
   padding: 30px;
   position: fixed;
-  margin-top: 10px;
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 .qa-section {
@@ -197,7 +220,8 @@ body {
   background: #fff;
   border-radius: 10px;
   padding: 15px 20px;
-  margin: 15px;
+  margin: 15px 45px;
+  border: 0.5px solid #ccc;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
 }
 
@@ -213,4 +237,87 @@ body {
   display: none;
   padding: 8px 0 0 0;
   color: #333;
+}
+
+
+
+/* Tablet view (≥ 600px) */
+@media screen and (min-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    padding: 15px 30px;
+  }
+
+  .donation-section {
+    flex-direction: row;
+    gap: 10px;
+
+  }
+
+  .donation-section img {
+    width: 100%;
+  }
+
+  .card-content {
+    width: 60%;
+  }
+}
+
+
+
+/* Desktop view (≥ 900px) */
+@media screen and (min-width: 900px) {
+  .navbar {
+    padding: 20px 50px;
+  }
+
+  .donation-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .donation-section img {
+    max-width: 300px;
+  }
+
+  .card-content {
+    width: 70%;
+  }
+}
+
+/* Mobile (≤ 599px) */
+@media screen and (max-width: 599px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .navtwo {
+    flex-direction: column;
+  }
+
+  .donation-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .donation-section img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card-content {
+    width: 100%;
+  }
+
+  .button-section {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .donation-input {
+    width: 90%;
+  }
 }
