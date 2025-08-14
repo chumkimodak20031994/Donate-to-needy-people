@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate</title>
+  <link rel="styleSheet" href="./css/style.css" />
+</head>
+
+<body>
+  <main>
+    <!-- navbar section    -->
+    <nav class="navbar">
+      <div>
+        <!-- <button class="blog-btn">Blog</button> -->
+        <button class="blog-btn" onclick="toggleQA()">Blog</button>
+      </div>
+      <div class="navtwo">
+        <div><img class="logo" src="./asset/logo.png" alt="logo" /></div>
+        <div>
+          <p>Donate to needy people</p>
+        </div>
+      </div>
+      <div class="navthree">
+        <div><img class="coin" src="./asset/coin.png" alt="coin" /></div>
+        <span id="donation-amount">5500 BDT</span>
+      </div>
+    </nav>
+
+    <!-- Question & Answer Section -->
+    <div id="qa-section" style="display: none">
+      <h2 class="qa-section">Questions & Answers</h2>
+      <div class="qa-card">
+        <div class="Questions" onclick="toggleAnswer(this)">
+          <span><strong>Q1</strong>What is the document object model(DOM)?</span>
+           <span class="arrow">&#9660;</span>
+        </div>
+        <div class="answer">
+          <p><strong>A1:</strong> The Document Object Model (DOM) is a cross-platform and language-independent API that treats an HTML or XML document as a tree structure, where each node represents a part of the document, such as an element, attribute, or piece of text</p>
+
+        </div>
+      </div>
+<!-- qestion2   -->
+ <div class="qa-card">
+        <div class="Questions" onclick="toggleAnswer(this)">
+          <span><strong>Q2</strong>How do you select an element from the dom ?</span>
+           <span class="arrow">&#9660;</span>
+        </div>
+        <div class="answer">
+          <p><strong>A2:</strong> The Document Object Model (DOM) is a cross-platform and language-independent API that treats an HTML or XML document as a tree structure, where each node represents a part of the document, such as an element, attribute, or piece of text</p>
+
+        </div>
+      </div>
+      <!-- question3  -->
+        <div class="qa-card">
+        <div class="Questions" onclick="toggleAnswer(this)">
+          <span><strong>Q2</strong>What is event deligation in the context of the DOM?And why is usefull
+            ?</span>
+           <span class="arrow">&#9660;</span>
+        </div>
+        <div class="answer">
+          <p><strong>A2:</strong> The Document Object Model (DOM) is a cross-platform and language-independent API that treats an HTML or XML document as a tree structure, where each node represents a part of the document, such as an element, attribute, or piece of text</p>
+
+        </div>
+      </div>
+      <!-- question  4 -->
+        <div class="qa-card">
+        <div class="Questions" onclick="toggleAnswer(this)">
+          <span><strong>Q2</strong>How do you manipulate an elements attribute and styles using the DOM?</span>
+           <span class="arrow">&#9660;</span>
+        </div>
+        <div class="answer">
+          <p><strong>A2:</strong> The Document Object Model (DOM) is a cross-platform and language-independent API that treats an HTML or XML document as a tree structure, where each node represents a part of the document, such as an element, attribute, or piece of text</p>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- button sectin  -->
+    <div class="button-section">
+      <button onclick="showDonation()" class="donation-btn active">
+        Donation
+      </button>
+      <button onclick="showHistory()" class="history-button">
+        History
+      </button>
+    </div>
+    <div id="donation-section">
+      <!-- Card 1 -->
+      <div class="donation-section">
+        <div>
+          <img src="./asset/feni.png" alt="Feni" />
+        </div>
+        <div class="card-content">
+          <button class="coin-btn">
+            <img src="./asset/coin.png" alt="coinimg" />
+
+            <span id="account-blanace">0 BDT</span>
+          </button>
+          <div class="card-title">
+            Donate for Flood at Noakhali, Bangladesh
+          </div>
+          <div class="card-description">
+            The recent floods in Noakhali have caused significant damage to
+            homes infrastructure. Your donation will help provide essential
+            supplies and to those affected by this disaster. Every
+            contribution, big or small, makes difference. Please join us in
+            supporting the relief efforts and making a positive impact on the
+            lives of those in need.
+          </div>
+          <input id="donation-input" type="text" class="donation-input" placeholder="Write Donation Amount" />
+          <button id="donate-btn" class="donate-btn">Donate Now</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="donation-section">
+        <div>
+          <img src="./asset/noakhali.png" alt="Noakhali" />
+        </div>
+        <div class="card-content">
+          <button class="coin-btn">
+            <img src="./asset/coin.png" alt="coinimg" />
+
+            <span id="account-blanace">0 BDT</span>
+          </button>
+          <div class="card-title">
+            Donate for Flood Relief in Feni,Bangladesh
+          </div>
+          <div class="card-description">
+            The recent floods in Feni have devastated local communities,
+            leading to severe disruption and loss. Your generous donation will
+            help provide immediate aid, including food, clean water, and
+            medical supplies, to those affected by this calamity. Together, we
+            can offer crucial support and help rebuild lives in the aftermath
+            of this disaster. Every contribution counts towards making a real
+            difference. Please consider donating today to assist those in
+            urgent need.
+          </div>
+          <input id="donation-input" type="text" class="donation-input" placeholder="Write Donation Amount" />
+          <button id="donate-btn" class="donate-btn">Donate Now</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="donation-section">
+        <div>
+          <img src="./asset/quota-protest.png" alt="Quota Movement" />
+        </div>
+        <div class="card-content">
+          <button class="coin-btn">
+            <img src="./asset/coin.png" alt="coinimg" />
+
+            <span id="account-blanace">0 BDT</span>
+          </button>
+          <div class="card-title">Aid for Injured in the Quota Movement</div>
+          <div class="card-description">
+            The recent Quota movement has resulted in numerous injuries and
+            significant hardship for many individuals. Your support is crucial
+            in providing medical assistance, rehabilitation, and necessary
+            supplies to those affected. By contributing, you help ensure that
+            injured individuals receive the care and support they need during
+            this challenging time. Every donation plays a vital role in
+            alleviating their suffering and aiding in their recovery. Please
+            consider making a donation to support these brave individuals in
+            their time of need.
+          </div>
+          <input id="donation-input" type="text" class="donation-input" placeholder="Write Donation Amount" />
+          <button id="donate-btn" class="donate-btn">Donate Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="history-section" class="history-section"></div>
+    <footer class="fotter-content"></footer>
+  </main>
+
+  <script src="./donation.js"></script>
+  <script src="./utilities.js"></script>
+</body>
+
+</html>
